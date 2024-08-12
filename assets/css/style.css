@@ -1751,7 +1751,7 @@ section {
 }
 
 #footer .social-links a {
-  font-size: 18px;
+  font-size: 27px;
   display: inline-block;
   background: rgba(255, 255, 255, 0.1);
   color: #fff;
@@ -1760,8 +1760,8 @@ section {
   margin-right: 4px;
   border-radius: 50%;
   text-align: center;
-  width: 36px;
-  height: 36px;
+  width: 45px;
+  height: 45px;
   transition: 0.3s;
 }
 
