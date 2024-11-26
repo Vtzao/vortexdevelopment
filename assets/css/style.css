@@ -115,6 +115,7 @@ h6 {
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
+
 #header {
   transition: all 0.5s;
   z-index: 997;
@@ -435,6 +436,13 @@ h6 {
 #hero .container,
 #hero .container-fluid {
   padding-top: 84px;
+}
+
+#hero > div > div > div.col-xl-5.col-lg-6.pt-3.pt-lg-0.order-2.order-lg-1.d-flex.flex-column.justify-content-center > a{
+  text-align: center;
+  display: flex;
+  width: 60%;
+  margin-bottom: 50px;
 }
 
 #hero h1 {
@@ -1751,7 +1759,7 @@ section {
 }
 
 #footer .social-links a {
-  font-size: 27px;
+  font-size: 27 px;
   display: inline-block;
   background: rgba(255, 255, 255, 0.1);
   color: #fff;
