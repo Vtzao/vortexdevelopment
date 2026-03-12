@@ -80,7 +80,12 @@
           <li><a class="nav-link scrollto " href="#portfolio">Portfólio</a></li>
           <li><a class="nav-link scrollto" href="#team">Equipe</a></li>
           <li><a class="nav-link scrollto" href="#contact">Contato</a></li>
-          <li><a class="getstarted scrollto" href="https://wa.me/+5541988708878" target="_blank">Chamar no Whatsapp</a></li>
+                    <li>
+            <a class="getstarted scrollto whatsapp-cta" href="https://wa.me/+5541988708878" target="_blank" rel="noopener noreferrer">
+              <span class="whatsapp-icon-wrap" aria-hidden="true"><i class="bi bi-whatsapp"></i></span>
+              <span>Chamar no Whatsapp</span>
+            </a>
+          </li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -133,6 +138,80 @@
 
       </div>
     </section><!-- End About Section -->
+
+    <!-- Team Section -->
+    <section id="team" class="team section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>EQUIPE</h2>
+        <p>Nosso time pronto pra lhe atender.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container justify-content-center">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+            <div class="team-member">
+              <div class="member-img">
+                <img src="assets/img/team/vitor.JPG" alt="Vitor" class="img-fluid">
+                <div class="social">
+                  <a target="_blank" href="https://pereiravt.com/" title="Portfólio - Vitor Pereira"><i class="bi bi-link-45deg"></i></a>
+                  <a target="_blank" href="https://github.com/Vtzao" title="Github - Vtzao"><i class="bi bi-github"></i></a>
+                  <a target="_blank" href="https://www.instagram.com/pereira_vt/" title="Instagram"><i class="bi bi-instagram"></i></a>
+                  <a target="_blank" href="https://www.linkedin.com/in/vitor-pereira-co/" title="Linkedin"><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Vitor Pereira</h4>
+                <span>Desenvolvedor FrontEnd e Líder de Projetos</span>
+                <p>Vitor é o responsável pelo desenvolvimento Front End, ele garante que todos os projetos sejam concluídos com a mais alta qualidade e eficiência, liderando a equipe com sua visão estratégica e habilidades técnicas.
+                </p>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+            <div class="team-member">
+              <div class="member-img">
+                <img src="assets/img/team/guilherme.jpeg" class="img-fluid" alt="Guilherme">
+                <div class="social">
+                  <a href="https://github.com/guiguizan" title="Github" target="_blank"><i class="bi bi-github"></i></a>
+                  <a href="https://www.linkedin.com/in/guilherme-zanchettin-1a56b2158/" target="_blank" title="Linkedin"><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Guilherme Zanchettin</h4>
+                <span>Desenvolvedor BackEnd e Co-idealizador de Projetos</span>
+                <p>Guilherme é o especialista em desenvolvimento back end, contribuindo com soluções técnicas robustas e inovadoras. Garantindo que todas as funcionalidades funcionem perfeitamente e atendam às necessidades dos clientes.</p>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+            <div class="team-member">
+              <div class="member-img">
+                <img src="assets/img/team/douglas.jpg" class="img-fluid" alt="Guilherme">
+                <div class="social">
+                  <a href="https://github.com/guiguizan" title="Github" target="_blank"><i class="bi bi-github"></i></a>
+                  <a href="https://www.linkedin.com/in/guilherme-zanchettin-1a56b2158/" target="_blank" title="Linkedin"><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Douglas Souza</h4>
+                <span>Desenvolvedor BackEnd e CloudComputing</span>
+                <p>Douglas é o nosso especialista em cloud computing e banco de dados, trazendo soluções modernas para armazenamento, gerenciamento e escalabilidade, sempre garantindo a melhor performance para nossos clientes.</p>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+
+        </div>
+
+      </div>
+
+    </section><!-- /Team Section -->
 
     <!-- ======= Counts Section =======
     <section id="counts" class="counts">
@@ -372,6 +451,18 @@
                 <h4>CEO DomuCabinets</h4>
               </div>
             </div><!-- End testimonial item -->
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  So tenho a agradecer, superou nossas expectativas e atendeu muito as demandas que temos. A landing page ainda foi integrada ao nosso CRM Salesforce.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/adri.jpg" class="testimonial-img" alt="Cliente">
+                <h3>Adriana Lopes</h3>
+                <h4>Gerente Organnact USA</h4>
+              </div>
+            </div><!-- End testimonial item -->
 
           </div>
           <div class="swiper-pagination"></div>
@@ -391,126 +482,99 @@
 
         <div class="row portfolio-container">
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/site portfolio 1.png" class="img-fluid" alt="Exemplo Site">
-              <div class="portfolio-info">
-                <h4>Portfólios</h4>
-                <p>Website</p>
+          <div class="col-lg-4 col-md-6 portfolio-item">
+            <article class="portfolio-card" data-images="assets/img/portfolio/site portfolio 1.png|assets/img/portfolio/site portfolio 2.png|assets/img/portfolio/One page 2.png">
+              <button type="button" class="portfolio-card-trigger" aria-expanded="false">
+                <div class="portfolio-frame">
+                  <img src="assets/img/portfolio/site portfolio 1.png" class="img-fluid portfolio-preview" alt="Projeto Portfolios">
+                </div>
+                <div class="portfolio-meta">
+                  <h4>Portfolios</h4>
+                  <p>Website</p>
+                </div>
+              </button>
+              <div class="portfolio-dropdown" aria-hidden="true">
+                <a href="assets/img/portfolio/site portfolio 1.png" data-gallery="portfolio-site" class="portfolio-lightbox" title="Portfolios">Ver imagens</a>
+                <span class="portfolio-separator" aria-hidden="true">|</span>
+                <a href="#contact" class="scrollto">Acessar projeto</a>
+                <a href="assets/img/portfolio/site portfolio 2.png" data-gallery="portfolio-site" class="portfolio-lightbox portfolio-hidden-link" title="Portfolios"></a>
+                <a href="assets/img/portfolio/One page 2.png" data-gallery="portfolio-site" class="portfolio-lightbox portfolio-hidden-link" title="Portfolios"></a>
               </div>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/site portfolio 1.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-portfolio.html" title="Mais Detalhes"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
+            </article>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/Print 1.png" class="img-fluid" alt="Exemplo Site">
-              <div class="portfolio-info">
-                <h4>Domu Cabinets</h4>
-                <p>Web Software</p>
+          <div class="col-lg-4 col-md-6 portfolio-item">
+            <article class="portfolio-card" data-images="assets/img/portfolio/Print 1.png|assets/img/portfolio/print 2.png|assets/img/portfolio/print 3.png">
+              <button type="button" class="portfolio-card-trigger" aria-expanded="false">
+                <div class="portfolio-frame">
+                  <img src="assets/img/portfolio/Print 1.png" class="img-fluid portfolio-preview" alt="Projeto Domu Cabinets">
+                </div>
+                <div class="portfolio-meta">
+                  <h4>Domu Cabinets</h4>
+                  <p>Web Software</p>
+                </div>
+              </button>
+              <div class="portfolio-dropdown" aria-hidden="true">
+                <a href="assets/img/portfolio/Print 1.png" data-gallery="portfolio-domu" class="portfolio-lightbox" title="Domu Cabinets">Ver imagens</a>
+                <span class="portfolio-separator" aria-hidden="true">|</span>
+                <a href="https://domucabinets.store/" target="_blank" rel="noopener noreferrer">Acessar projeto</a>
+                <a href="assets/img/portfolio/print 2.png" data-gallery="portfolio-domu" class="portfolio-lightbox portfolio-hidden-link" title="Domu Cabinets"></a>
+                <a href="assets/img/portfolio/print 3.png" data-gallery="portfolio-domu" class="portfolio-lightbox portfolio-hidden-link" title="Domu Cabinets"></a>
               </div>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/Print 1.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3" ><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="Mais Detalhes"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
+            </article>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/Onepage.png" class="img-fluid" alt="Exemplo Site">
-              <div class="portfolio-info">
-                <h4>OnePage</h4>
-                <p>Website</p>
+          <div class="col-lg-4 col-md-6 portfolio-item">
+            <article class="portfolio-card" data-images="assets/img/portfolio/clinic 1.png|assets/img/portfolio/clinic 2.png|assets/img/portfolio/clinic 3.png|assets/img/portfolio/clinic 4.png|assets/img/portfolio/clinic 5.png">
+              <button type="button" class="portfolio-card-trigger" aria-expanded="false">
+                <div class="portfolio-frame">
+                  <img src="assets/img/portfolio/clinic 1.png" class="img-fluid portfolio-preview" alt="Projeto OnePage">
+                </div>
+                <div class="portfolio-meta">
+                  <h4>OnePage</h4>
+                  <p>Landing Page</p>
+                </div>
+              </button>
+              <div class="portfolio-dropdown" aria-hidden="true">
+                <a href="assets/img/portfolio/clinic 1.png" data-gallery="portfolio-onepage" class="portfolio-lightbox" title="OnePage">Ver imagens</a>
+                <span class="portfolio-separator" aria-hidden="true">|</span>
+                <a href="#contact" class="scrollto">Acessar projeto</a>
+                <a href="assets/img/portfolio/clinic 2.png" data-gallery="portfolio-onepage" class="portfolio-lightbox portfolio-hidden-link" title="OnePage"></a>
+                <a href="assets/img/portfolio/clinic 3.png" data-gallery="portfolio-onepage" class="portfolio-lightbox portfolio-hidden-link" title="OnePage"></a>
+                <a href="assets/img/portfolio/clinic 4.png" data-gallery="portfolio-onepage" class="portfolio-lightbox portfolio-hidden-link" title="OnePage"></a>
+                <a href="assets/img/portfolio/clinic 5.png" data-gallery="portfolio-onepage" class="portfolio-lightbox portfolio-hidden-link" title="OnePage"></a>
               </div>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/Onepage.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
-              </div>
-            </div>
+            </article>
           </div>
 
+          <div class="col-lg-4 col-md-6 portfolio-item">
+            <article class="portfolio-card" data-images="assets/img/portfolio/orgausa1.jpg|assets/img/portfolio/orgausa2.png|assets/img/portfolio/orgausa3.png|assets/img/portfolio/orgausa4.png">
+              <button type="button" class="portfolio-card-trigger" aria-expanded="false">
+                <div class="portfolio-frame">
+                  <img src="assets/img/portfolio/orgausa1.jpg" class="img-fluid portfolio-preview" alt="Projeto Website landingpage">
+                </div>
+                <div class="portfolio-meta">
+                  <h4>Website landingpage</h4>
+                  <p>Landing Page</p>
+                </div>
+              </button>
+              <div class="portfolio-dropdown" aria-hidden="true">
+                <a href="assets/img/portfolio/orgausa1.jpg" data-gallery="portfolio-organnact" class="portfolio-lightbox" title="Website landingpage">Ver imagens</a>
+                <span class="portfolio-separator" aria-hidden="true">|</span>
+                <a href="https://partners.organnact.com/" target="_blank" rel="noopener noreferrer">Acessar projeto</a>
+                <a href="assets/img/portfolio/orgausa2.png" data-gallery="portfolio-organnact" class="portfolio-lightbox portfolio-hidden-link" title="Website landingpage"></a>
+                <a href="assets/img/portfolio/orgausa3.png" data-gallery="portfolio-organnact" class="portfolio-lightbox portfolio-hidden-link" title="Website landingpage"></a>
+                <a href="assets/img/portfolio/orgausa4.png" data-gallery="portfolio-organnact" class="portfolio-lightbox portfolio-hidden-link" title="Website landingpage"></a>
+              </div>
+            </article>
+          </div>
 
         </div>
 
       </div>
     </section><!-- End Portfolio Section -->
 
-    <!-- Team Section -->
-    <section id="team" class="team section">
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>EQUIPE</h2>
-        <p>Nosso time pronto pra lhe atender.</p>
-      </div><!-- End Section Title -->
-
-      <div class="container justify-content-center">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-            <div class="team-member">
-              <div class="member-img">
-                <img src="assets/img/team/vitor.JPG" alt="Vitor" class="img-fluid">
-                <div class="social">
-                  <a target="_blank" href="https://pereiravt.com/" title="Portfólio - Vitor Pereira"><i class="bi bi-link-45deg"></i></a>
-                  <a target="_blank" href="https://github.com/Vtzao" title="Github - Vtzao"><i class="bi bi-github"></i></a>
-                  <a target="_blank" href="https://www.instagram.com/pereira_vt/" title="Instagram"><i class="bi bi-instagram"></i></a>
-                  <a target="_blank" href="https://www.linkedin.com/in/vitor-pereira-co/" title="Linkedin"><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>Vitor Pereira</h4>
-                <span>Desenvolvedor FrontEnd e Líder de Projetos</span>
-                <p>Vitor é o responsável pelo desenvolvimento Front End, ele garante que todos os projetos sejam concluídos com a mais alta qualidade e eficiência, liderando a equipe com sua visão estratégica e habilidades técnicas.
-                </p>
-              </div>
-            </div>
-          </div><!-- End Team Member -->
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-            <div class="team-member">
-              <div class="member-img">
-                <img src="assets/img/team/guilherme.jpeg" class="img-fluid" alt="Guilherme">
-                <div class="social">
-                  <a href="https://github.com/guiguizan" title="Github" target="_blank"><i class="bi bi-github"></i></a>
-                  <a href="https://www.linkedin.com/in/guilherme-zanchettin-1a56b2158/" target="_blank" title="Linkedin"><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>Guilherme Zanchettin</h4>
-                <span>Desenvolvedor BackEnd e Co-idealizador de Projetos</span>
-                <p>Guilherme é o especialista em desenvolvimento back end, contribuindo com soluções técnicas robustas e inovadoras. Garantindo que todas as funcionalidades funcionem perfeitamente e atendam às necessidades dos clientes.</p>
-              </div>
-            </div>
-          </div><!-- End Team Member -->
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-            <div class="team-member">
-              <div class="member-img">
-                <img src="assets/img/team/douglas.jpg" class="img-fluid" alt="Guilherme">
-                <div class="social">
-                  <a href="https://github.com/guiguizan" title="Github" target="_blank"><i class="bi bi-github"></i></a>
-                  <a href="https://www.linkedin.com/in/guilherme-zanchettin-1a56b2158/" target="_blank" title="Linkedin"><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>Douglas Souza</h4>
-                <span>Desenvolvedor BackEnd e CloudComputing</span>
-                <p>Douglas é o nosso especialista em cloud computing e banco de dados, trazendo soluções modernas para armazenamento, gerenciamento e escalabilidade, sempre garantindo a melhor performance para nossos clientes.</p>
-              </div>
-            </div>
-          </div><!-- End Team Member -->
-
-
-        </div>
-
-      </div>
-
-    </section><!-- /Team Section -->
 
     <!-- ======= Pricing Section =======
     <section id="pricing" class="pricing section-bg">

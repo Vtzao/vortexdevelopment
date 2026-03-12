@@ -192,33 +192,105 @@
   });
 
   /**
-   * Porfolio isotope and filter
+   * Portfolio cards (hover preview + click dropdown)
    */
   window.addEventListener('load', () => {
-    let portfolioContainer = select('.portfolio-container');
-    if (portfolioContainer) {
-      let portfolioIsotope = new Isotope(portfolioContainer, {
-        itemSelector: '.portfolio-item'
-      });
+    const portfolioCards = select('.portfolio-card', true);
 
-      let portfolioFilters = select('#portfolio-flters li', true);
-
-      on('click', '#portfolio-flters li', function(e) {
-        e.preventDefault();
-        portfolioFilters.forEach(function(el) {
-          el.classList.remove('filter-active');
-        });
-        this.classList.add('filter-active');
-
-        portfolioIsotope.arrange({
-          filter: this.getAttribute('data-filter')
-        });
-        portfolioIsotope.on('arrangeComplete', function() {
-          AOS.refresh()
-        });
-      }, true);
+    if (!portfolioCards.length) {
+      return;
     }
 
+    const closeAllCards = () => {
+      portfolioCards.forEach((card) => {
+        const trigger = card.querySelector('.portfolio-card-trigger');
+        const dropdown = card.querySelector('.portfolio-dropdown');
+
+        card.classList.remove('is-open');
+        if (trigger) {
+          trigger.setAttribute('aria-expanded', 'false');
+        }
+        if (dropdown) {
+          dropdown.setAttribute('aria-hidden', 'true');
+        }
+      });
+    };
+
+    portfolioCards.forEach((card) => {
+      const trigger = card.querySelector('.portfolio-card-trigger');
+      const preview = card.querySelector('.portfolio-preview');
+      const dropdown = card.querySelector('.portfolio-dropdown');
+      const images = (card.dataset.images || '')
+        .split('|')
+        .map((image) => image.trim())
+        .filter(Boolean);
+
+      let currentIndex = 0;
+      let cycleInterval = null;
+
+      const showImage = (index) => {
+        if (preview && images[index]) {
+          preview.src = images[index];
+        }
+      };
+
+      const startCycle = () => {
+        if (!preview || images.length < 2 || cycleInterval) {
+          return;
+        }
+
+        cycleInterval = setInterval(() => {
+          currentIndex = (currentIndex + 1) % images.length;
+          showImage(currentIndex);
+        }, 1200);
+      };
+
+      const stopCycle = () => {
+        if (!cycleInterval) {
+          return;
+        }
+
+        clearInterval(cycleInterval);
+        cycleInterval = null;
+        currentIndex = 0;
+        showImage(currentIndex);
+      };
+
+      if (trigger) {
+        trigger.addEventListener('mouseenter', startCycle);
+        trigger.addEventListener('mouseleave', stopCycle);
+        trigger.addEventListener('focusin', startCycle);
+        trigger.addEventListener('focusout', stopCycle);
+
+        trigger.addEventListener('click', (event) => {
+          event.preventDefault();
+          event.stopPropagation();
+
+          const shouldOpen = !card.classList.contains('is-open');
+          closeAllCards();
+
+          if (shouldOpen) {
+            card.classList.add('is-open');
+            trigger.setAttribute('aria-expanded', 'true');
+            if (dropdown) {
+              dropdown.setAttribute('aria-hidden', 'false');
+            }
+          }
+        });
+      }
+
+      if (dropdown) {
+        dropdown.addEventListener('click', (event) => {
+          event.stopPropagation();
+        });
+      }
+    });
+
+    document.addEventListener('click', (event) => {
+      if (!event.target.closest('.portfolio-card')) {
+        closeAllCards();
+      }
+    });
   });
 
   /**
