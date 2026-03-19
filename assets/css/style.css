@@ -270,6 +270,69 @@ h6 {
   visibility: hidden;
 }
 
+.header-actions {
+  display: flex;
+  align-items: center;
+}
+
+.lang-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.lang-toggle:hover,
+.lang-toggle:focus {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.75);
+  color: #fff;
+}
+
+.lang-toggle:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.18);
+}
+
+.navbar .language-nav-item {
+  margin-left: 12px;
+}
+
+.lang-flags {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.lang-flag {
+  font-size: 16px;
+  line-height: 1;
+  opacity: 0.45;
+  transform: scale(0.92);
+  transition: 0.3s ease;
+}
+
+.lang-toggle[data-current-language="pt"] .lang-flag-br,
+.lang-toggle[data-current-language="en"] .lang-flag-us {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.lang-label {
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+}
+
 .navbar .dropdown ul {
   display: block;
   position: absolute;
@@ -347,6 +410,11 @@ h6 {
 }
 
 @media (max-width: 991px) {
+  .lang-toggle {
+    padding: 7px 12px;
+    font-size: 12px;
+  }
+
   .mobile-nav-toggle {
     display: block;
   }
@@ -420,6 +488,26 @@ h6 {
   justify-content: center;
   border-color: rgba(88, 70, 249, 0.5);
   color: #5846f9;
+}
+
+.navbar-mobile .language-nav-item {
+  margin-left: 0;
+}
+
+.navbar-mobile .lang-toggle {
+  width: calc(100% - 30px);
+  margin: 0 15px 15px;
+  justify-content: center;
+  border-color: rgba(88, 70, 249, 0.35);
+  background: rgba(88, 70, 249, 0.08);
+  color: #5846f9;
+}
+
+.navbar-mobile .lang-toggle:focus,
+.navbar-mobile .lang-toggle:hover {
+  border-color: rgba(88, 70, 249, 0.6);
+  color: #5846f9;
+  background: rgba(88, 70, 249, 0.12);
 }
 
 .navbar-mobile .whatsapp-cta .whatsapp-icon-wrap {

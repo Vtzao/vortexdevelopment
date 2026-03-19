@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
   <meta charset="utf-8">
@@ -72,8 +72,9 @@
     <div class="container d-flex align-items-center justify-content-between">
       <a href="index.html" class="logo"><img src="assets/img/vortex-development.png" alt="Logotipo Vortex Development" class="img-fluid"></a>
 
-      <nav id="navbar" class="navbar">
-        <ul>
+      <div class="header-actions">
+        <nav id="navbar" class="navbar">
+          <ul>
           <li><a class="nav-link scrollto active" href="#hero">Início</a></li>
           <li><a class="nav-link scrollto" href="#about">Sobre Nós</a></li>
           <li><a class="nav-link scrollto" href="#services">Serviços</a></li>
@@ -87,9 +88,19 @@
               <span>Chamar no Whatsapp</span>
             </a>
           </li>
+          <li class="language-nav-item">
+            <button type="button" class="lang-toggle" data-language-toggle data-current-language="pt" aria-label="Switch site to English" title="Switch site to English">
+              <span class="lang-flags" aria-hidden="true">
+                <span class="lang-flag lang-flag-br" data-language-flag-br></span>
+                <span class="lang-flag lang-flag-us" data-language-flag-us></span>
+              </span>
+              <span class="lang-label" data-language-label>PT | EN</span>
+            </button>
+          </li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
+      </div>
 
     </div>
   </header><!-- End Header -->
@@ -954,7 +965,7 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-  <script type="application/ld+json">
+  <script type="application/ld+json" id="organization-schema">
     {
       "@context": "https://schema.org",
       "@type": "Organization",
@@ -976,6 +987,7 @@
       }
     }
     </script>
+  <script src="assets/js/i18n.js"></script>
 
 
 </body>
