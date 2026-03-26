@@ -239,24 +239,27 @@
 
   const syncToggle = (language) => {
     const toggleButton = select('[data-language-toggle]');
-    const flagBr = select('[data-language-flag-br]');
-    const flagUs = select('[data-language-flag-us]');
     const label = select('[data-language-label]');
+    const options = document.querySelectorAll('[data-language-option]');
 
-    if (!toggleButton || !flagBr || !flagUs || !label) {
+    if (!toggleButton || !label) {
       return;
     }
 
-    const nextLanguage = language === 'en'
-      ? { title: 'Mudar site para portugu\u00eas' }
-      : { title: 'Switch site to English' };
+    const toggleState = language === 'en'
+      ? { label: 'English', title: 'Select language' }
+      : { label: 'Portugu\u00eas', title: 'Selecionar idioma' };
 
-    flagBr.textContent = '\ud83c\udde7\ud83c\uddf7';
-    flagUs.textContent = '\ud83c\uddfa\ud83c\uddf8';
-    label.textContent = 'PT | EN';
+    label.textContent = toggleState.label;
     toggleButton.dataset.currentLanguage = language;
-    toggleButton.setAttribute('aria-label', nextLanguage.title);
-    toggleButton.setAttribute('title', nextLanguage.title);
+    toggleButton.setAttribute('aria-label', toggleState.title);
+    toggleButton.setAttribute('title', toggleState.title);
+
+    options.forEach((option) => {
+      const isActive = option.dataset.languageOption === language;
+      option.classList.toggle('is-active', isActive);
+      option.setAttribute('aria-checked', isActive ? 'true' : 'false');
+    });
   };
 
   const applyEnglish = () => {
@@ -348,11 +351,44 @@
     }
   };
 
+  const languageDropdown = select('[data-language-dropdown]');
   const toggleButton = select('[data-language-toggle]');
-  if (toggleButton) {
-    toggleButton.addEventListener('click', () => {
-      const currentLanguage = document.documentElement.lang === 'en' ? 'en' : 'pt';
-      applyLanguage(currentLanguage === 'en' ? 'pt' : 'en');
+  const languageOptions = document.querySelectorAll('[data-language-option]');
+
+  const setDropdownOpen = (isOpen) => {
+    if (!languageDropdown || !toggleButton) {
+      return;
+    }
+
+    languageDropdown.classList.toggle('is-open', isOpen);
+    toggleButton.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  };
+
+  if (toggleButton && languageDropdown) {
+    toggleButton.addEventListener('click', (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      setDropdownOpen(!languageDropdown.classList.contains('is-open'));
+    });
+
+    languageOptions.forEach((option) => {
+      option.addEventListener('click', (event) => {
+        event.preventDefault();
+        applyLanguage(option.dataset.languageOption === 'en' ? 'en' : 'pt');
+        setDropdownOpen(false);
+      });
+    });
+
+    document.addEventListener('click', (event) => {
+      if (!languageDropdown.contains(event.target)) {
+        setDropdownOpen(false);
+      }
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') {
+        setDropdownOpen(false);
+      }
     });
   }
 
@@ -367,4 +403,5 @@
   }
 
   applyLanguage(initialLanguage);
+  setDropdownOpen(false);
 })();

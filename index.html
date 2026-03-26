@@ -88,14 +88,20 @@
               <span>Chamar no Whatsapp</span>
             </a>
           </li>
-          <li class="language-nav-item">
-            <button type="button" class="lang-toggle" data-language-toggle data-current-language="pt" aria-label="Switch site to English" title="Switch site to English">
-              <span class="lang-flags" aria-hidden="true">
-                <span class="lang-flag lang-flag-br" data-language-flag-br></span>
-                <span class="lang-flag lang-flag-us" data-language-flag-us></span>
-              </span>
-              <span class="lang-label" data-language-label>PT | EN</span>
+          <li class="language-nav-item lang-dropdown" data-language-dropdown>
+            <button type="button" class="lang-toggle" data-language-toggle data-current-language="pt" aria-haspopup="true" aria-expanded="false" aria-controls="language-menu" aria-label="Selecionar idioma" title="Selecionar idioma">
+              <i class="bi bi-globe2 lang-toggle-icon" aria-hidden="true"></i>
+              <span class="lang-label" data-language-label>Português</span>
+              <i class="bi bi-chevron-down lang-toggle-caret" aria-hidden="true"></i>
             </button>
+            <div class="lang-menu" id="language-menu" role="menu" aria-label="Idiomas disponíveis">
+              <button type="button" class="lang-option is-active" data-language-option="pt" role="menuitemradio" aria-checked="true">
+                <span class="lang-option-label">Português</span>
+              </button>
+              <button type="button" class="lang-option" data-language-option="en" role="menuitemradio" aria-checked="false">
+                <span class="lang-option-label">English</span>
+              </button>
+            </div>
           </li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>

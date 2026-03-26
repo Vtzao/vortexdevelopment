@@ -278,59 +278,102 @@ h6 {
 .lang-toggle {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  padding: 8px 14px;
-  border: 1px solid rgba(255, 255, 255, 0.35);
+  gap: 14px;
+  padding: 10px 18px;
+  border: none;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.12);
-  color: #fff;
+  background: #ffffff;
+  color: #111111;
   font-family: "Poppins", sans-serif;
-  font-size: 13px;
-  font-weight: 700;
+  font-size: 15px;
+  font-weight: 500;
   line-height: 1;
   cursor: pointer;
-  transition: 0.3s ease;
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.18);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
 }
 
 .lang-toggle:hover,
 .lang-toggle:focus {
-  background: rgba(255, 255, 255, 0.2);
-  border-color: rgba(255, 255, 255, 0.75);
-  color: #fff;
+  background: #f8fafc;
+  color: #111111;
+  box-shadow: 0 16px 32px rgba(15, 23, 42, 0.22);
+  transform: translateY(-1px);
 }
 
 .lang-toggle:focus {
   outline: none;
-  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.18);
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.18), 0 16px 32px rgba(15, 23, 42, 0.22);
 }
 
 .navbar .language-nav-item {
-  margin-left: 12px;
+  margin-left: 16px;
+  position: relative;
 }
 
-.lang-flags {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.lang-flag {
-  font-size: 16px;
+.lang-toggle-icon {
+  font-size: 24px;
   line-height: 1;
-  opacity: 0.45;
-  transform: scale(0.92);
-  transition: 0.3s ease;
-}
-
-.lang-toggle[data-current-language="pt"] .lang-flag-br,
-.lang-toggle[data-current-language="en"] .lang-flag-us {
-  opacity: 1;
-  transform: scale(1);
 }
 
 .lang-label {
-  letter-spacing: 0.06em;
   white-space: nowrap;
+}
+
+.lang-toggle-caret {
+  font-size: 14px;
+  line-height: 1;
+  transition: transform 0.25s ease;
+}
+
+.lang-dropdown.is-open .lang-toggle-caret {
+  transform: rotate(180deg);
+}
+
+.lang-menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 12px);
+  right: 0;
+  min-width: 100%;
+  padding: 8px;
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.18);
+  z-index: 120;
+}
+
+.lang-dropdown.is-open .lang-menu {
+  display: block;
+}
+
+.lang-option {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 12px 14px;
+  border: none;
+  border-radius: 14px;
+  background: transparent;
+  color: #111111;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.lang-option:hover,
+.lang-option:focus {
+  background: #f8fafc;
+  color: #111111;
+  outline: none;
+}
+
+.lang-option.is-active {
+  background: #eef2ff;
+  color: #1e293b;
 }
 
 .navbar .dropdown ul {
@@ -411,8 +454,9 @@ h6 {
 
 @media (max-width: 991px) {
   .lang-toggle {
-    padding: 7px 12px;
-    font-size: 12px;
+    gap: 12px;
+    padding: 9px 16px;
+    font-size: 14px;
   }
 
   .mobile-nav-toggle {
@@ -492,22 +536,41 @@ h6 {
 
 .navbar-mobile .language-nav-item {
   margin-left: 0;
+  position: static;
 }
 
 .navbar-mobile .lang-toggle {
   width: calc(100% - 30px);
   margin: 0 15px 15px;
-  justify-content: center;
-  border-color: rgba(88, 70, 249, 0.35);
-  background: rgba(88, 70, 249, 0.08);
-  color: #5846f9;
+  justify-content: flex-start;
+  background: #ffffff;
+  color: #111111;
+  box-shadow: none;
+}
+
+.navbar-mobile .lang-toggle .lang-toggle-caret {
+  margin-left: auto;
+}
+
+.navbar-mobile .lang-menu {
+  position: static;
+  min-width: 0;
+  margin: -5px 15px 15px;
+  border: 1px solid rgba(88, 70, 249, 0.16);
+  box-shadow: none;
 }
 
 .navbar-mobile .lang-toggle:focus,
 .navbar-mobile .lang-toggle:hover {
-  border-color: rgba(88, 70, 249, 0.6);
+  color: #111111;
+  background: #f8fafc;
+  box-shadow: none;
+  transform: none;
+}
+
+.navbar-mobile .lang-option.is-active {
+  background: rgba(88, 70, 249, 0.1);
   color: #5846f9;
-  background: rgba(88, 70, 249, 0.12);
 }
 
 .navbar-mobile .whatsapp-cta .whatsapp-icon-wrap {
