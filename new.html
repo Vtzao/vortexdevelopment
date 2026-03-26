@@ -5,11 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vortex Development - Soluções Digitais</title>
     
-    <meta name="description" content="Desenvolvimento de landing pages, sites institucionais e sistemas web sob medida para empresas que querem vender mais.">
-    <meta name="keywords" content="desenvolvimento web, landing page, site institucional, sistema web, vortex development">
-    <link href="assets/img/favicon.png" rel="icon">
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-    
     <!-- Tailwind CSS (CDN para carregar os estilos mágicos) -->
     <script src="https://cdn.tailwindcss.com"></script>
     
@@ -18,40 +13,19 @@
 
     <!-- Fonte Customizada (Inter) para um visual mais Premium -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
     
     <style>
         body {
             font-family: 'Inter', sans-serif;
             scroll-behavior: smooth;
         }
-        /* Garantindo que o clique no menu mobile n&atilde;o d&ecirc; pulos na tela */
+        /* Garantindo que o clique no menu mobile não dê pulos na tela */
         html { scroll-behavior: smooth; }
     </style>
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-TMLN3787');</script>
-    <!-- End Google Tag Manager -->
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6TYZ3HQPDQ"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-6TYZ3HQPDQ');
-    </script>
 </head>
 <body class="bg-slate-50 text-slate-900 antialiased overflow-x-hidden">
 
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TMLN3787"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-
-    <!-- BOTAO FLUTUANTE WHATSAPP -->
+    <!-- 🟢 BOTÃO FLUTUANTE WHATSAPP -->
     <a 
         href="https://wa.me/5541988708878?text=Ol%C3%A1%2C%20equipe%20Vortex!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20e%20entender%20melhor%20como%20voc%C3%AAs%20podem%20me%20ajudar." 
         target="_blank" 
@@ -59,7 +33,7 @@
         class="fixed bottom-6 right-6 z-50 bg-green-500 text-white p-4 rounded-full shadow-2xl hover:bg-green-600 transition-all duration-300 hover:scale-110 flex items-center justify-center animate-bounce"
         aria-label="Chamar no WhatsApp"
     >
-        <i class="bi bi-whatsapp text-3xl leading-none"></i>
+        <i data-lucide="message-circle" class="w-8 h-8"></i>
     </a>
 
     <!-- --- HEADER --- -->
@@ -67,16 +41,20 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
             
             <!-- Logo -->
-            <a href="index.html" class="inline-flex items-center">
-                <img src="assets/img/vortex-development.png" alt="Vortex Development" class="h-9 w-auto" />
-            </a>
+            <div class="flex items-center gap-2">
+                <div id="logo-container" class="w-8 h-8 rounded-full flex items-center justify-center bg-white transition-colors duration-300">
+                    <i id="logo-icon" data-lucide="zap" class="w-5 h-5 text-indigo-600 transition-colors duration-300"></i>
+                </div>
+                <span id="logo-text" class="text-2xl font-black tracking-tight text-white transition-colors duration-300">
+                    VORTEX
+                </span>
+            </div>
 
             <!-- Desktop Nav -->
             <nav class="hidden md:flex items-center gap-8">
                 <a href="#servicos" class="nav-link font-medium text-indigo-100 hover:text-indigo-400 transition-colors duration-300">Soluções</a>
                 <a href="#portfolio" class="nav-link font-medium text-indigo-100 hover:text-indigo-400 transition-colors duration-300">Portfólio</a>
                 <a href="#processo" class="nav-link font-medium text-indigo-100 hover:text-indigo-400 transition-colors duration-300">Processo</a>
-                <a href="#team" class="nav-link font-medium text-indigo-100 hover:text-indigo-400 transition-colors duration-300">Equipe</a>
                 <a href="#diferenciais" class="nav-link font-medium text-indigo-100 hover:text-indigo-400 transition-colors duration-300">Diferenciais</a>
                 
                 <a 
@@ -85,7 +63,7 @@
                     rel="noopener noreferrer"
                     class="bg-green-500 hover:bg-green-600 text-white px-6 py-2.5 rounded-full font-bold transition-all flex items-center gap-2 shadow-lg hover:shadow-green-500/30"
                 >
-                    <i class="bi bi-whatsapp"></i>
+                    <i data-lucide="message-circle" class="w-[18px] h-[18px]"></i>
                     Falar no WhatsApp
                 </a>
             </nav>
@@ -102,7 +80,6 @@
             <a href="#servicos" class="mobile-nav-link text-slate-700 font-medium py-2 border-b">Soluções</a>
             <a href="#portfolio" class="mobile-nav-link text-slate-700 font-medium py-2 border-b">Portfólio</a>
             <a href="#processo" class="mobile-nav-link text-slate-700 font-medium py-2 border-b">Processo</a>
-            <a href="#team" class="mobile-nav-link text-slate-700 font-medium py-2 border-b">Equipe</a>
             <a href="#diferenciais" class="mobile-nav-link text-slate-700 font-medium py-2 border-b">Diferenciais</a>
             <a 
                 href="https://wa.me/5541988708878?text=Ol%C3%A1%2C%20equipe%20Vortex!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20e%20entender%20melhor%20como%20voc%C3%AAs%20podem%20me%20ajudar."
@@ -110,7 +87,7 @@
                 rel="noopener noreferrer"
                 class="bg-green-500 text-white px-4 py-3 rounded-xl font-bold text-center flex items-center justify-center gap-2 mt-2"
             >
-                <i class="bi bi-whatsapp"></i> Solicitar Orçamento
+                <i data-lucide="message-circle" class="w-[18px] h-[18px]"></i> Solicitar Orçamento
             </a>
         </div>
     </header>
@@ -122,7 +99,6 @@
         <div class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-purple-600/20 rounded-full blur-[100px] pointer-events-none"></div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
             <div class="max-w-3xl">
                 <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-900/50 border border-indigo-700/50 text-indigo-200 text-sm font-medium mb-6">
                     <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
@@ -144,7 +120,7 @@
                         rel="noopener noreferrer"
                         class="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all flex items-center justify-center gap-3 shadow-xl shadow-green-500/20 hover:-translate-y-1"
                     >
-                        <i class="bi bi-whatsapp text-xl"></i>
+                        <i data-lucide="message-circle" class="w-6 h-6"></i>
                         Solicitar Orçamento Agora
                     </a>
                     <a 
@@ -164,25 +140,33 @@
                     </div>
                 </div>
             </div>
-            <div class="hidden lg:flex justify-center">
-                <img src="assets/img/pc.svg" alt="Computador com website da Vortex" class="w-full max-w-xl drop-shadow-2xl">
-            </div>
-            </div>
         </div>
     </section>
 
     <!-- --- CLIENT LOGOS (TRUST BANNER) --- -->
-    <section class="py-10 bg-slate-900 border-b border-slate-800">
+    <section class="py-10 bg-white border-b border-slate-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <p class="text-center text-sm font-bold text-slate-300 uppercase tracking-widest mb-8">
+            <p class="text-center text-sm font-bold text-slate-400 uppercase tracking-widest mb-8">
                 Empresas que confiam na nossa tecnologia
             </p>
             
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 items-center justify-items-center">
-                <img src="assets/img/logos-clientes/logo-domucabinets.png" alt="Logo Domu Cabinets" class="h-10 md:h-12 w-auto object-contain opacity-85 hover:opacity-100 transition duration-300" />
-                <img src="assets/img/logos-clientes/logo-organnact.webp" alt="Logo Organnact" class="h-12 md:h-14 w-auto object-contain opacity-85 hover:opacity-100 transition duration-300" />
-                <img src="assets/img/logos-clientes/logo-antares.webp" alt="Logo Antares" class="h-10 md:h-12 w-auto object-contain opacity-85 hover:opacity-100 transition duration-300" />
-                <img src="assets/img/logos-clientes/logo-meta%20divisorias.png" alt="Logo Meta Divisorias" class="h-10 md:h-12 w-auto object-contain opacity-85 hover:opacity-100 transition duration-300" />
+            <div class="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+                <!-- Placeholder 1 -->
+                <div class="flex items-center gap-2 text-2xl font-black text-slate-800">
+                    <div class="w-8 h-8 bg-slate-800 rounded-md"></div> DOMU
+                </div>
+                <!-- Placeholder 2 -->
+                <div class="flex items-center gap-2 text-xl font-black text-slate-800">
+                    <div class="w-8 h-8 rounded-full border-4 border-slate-800"></div> Organnact
+                </div>
+                <!-- Placeholder 3 -->
+                <div class="flex items-center gap-2 text-2xl font-black text-slate-800 tracking-tighter">
+                    <div class="w-0 h-0 border-l-[12px] border-l-transparent border-b-[24px] border-b-slate-800 border-r-[12px] border-r-transparent"></div> MEDLAB
+                </div>
+                <!-- Placeholder 4 -->
+                <div class="flex items-center gap-2 text-xl font-black text-slate-800">
+                    <div class="w-8 h-8 bg-slate-800 rotate-45 rounded-sm"></div> TechStart
+                </div>
             </div>
         </div>
     </section>
@@ -192,7 +176,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-2xl mx-auto mb-16">
                 <h2 class="text-4xl font-black text-slate-900 mb-4">Soluções feitas para o <br/><span class="text-indigo-600">seu momento atual.</span></h2>
-                <p class="text-slate-600 text-lg">Seja para validar uma ideia rápida ou construir um imp&eacute;rio digital, nós temos a estrutura perfeita para você.</p>
+                <p class="text-slate-600 text-lg">Seja para validar uma ideia rápida ou construir um império digital, nós temos a estrutura perfeita para você.</p>
             </div>
 
             <div class="grid md:grid-cols-3 gap-8">
@@ -204,15 +188,14 @@
                     <div class="w-14 h-14 bg-indigo-50 rounded-2xl flex items-center justify-center mb-6 mt-2">
                         <i data-lucide="zap" class="w-7 h-7 text-indigo-600"></i>
                     </div>
-                    <h3 class="text-2xl font-bold text-slate-900 mb-2">Landing Pages Pr&eacute;-desenvolvidas</h3>
-                    <p class="text-slate-600 mb-6 flex-grow">Modelos pr&eacute;-desenvolvidos focados em alta convers&atilde;o, ideais para campanhas de an&uacute;ncios, infoprodutos e capta&ccedil;&atilde;o de leads.</p>
+                    <h3 class="text-2xl font-bold text-slate-900 mb-2">Landing Pages</h3>
+                    <p class="text-slate-600 mb-6 flex-grow">Páginas únicas focadas em alta conversão. Ideal para campanhas de anúncios, infoprodutos ou captação de leads.</p>
                     <div class="mb-6">
                         <span class="text-sm font-semibold text-slate-500 uppercase tracking-wider">A partir de</span>
                         <div class="text-4xl font-black text-slate-900 mt-1">R$ 997</div>
-                        <p class="mt-2 text-xs text-slate-500">Valor referente a landing page pr&eacute;-desenvolvida.</p>
                     </div>
                     <a href="https://wa.me/5541988708878" target="_blank" rel="noopener noreferrer" class="w-full bg-slate-900 hover:bg-indigo-600 text-white text-center py-3 rounded-xl font-bold transition-colors flex justify-center items-center gap-2">
-                        <i class="bi bi-whatsapp"></i> Quero uma Landing Page
+                        Quero uma Landing Page <i data-lucide="chevron-right" class="w-[18px] h-[18px]"></i>
                     </a>
                 </div>
 
@@ -229,7 +212,7 @@
                         <div class="text-2xl font-bold text-white mt-1">100% Personalizados</div>
                     </div>
                     <a href="https://wa.me/5541988708878" target="_blank" rel="noopener noreferrer" class="w-full bg-green-500 hover:bg-green-400 text-white text-center py-3 rounded-xl font-bold transition-colors flex justify-center items-center gap-2">
-                        <i class="bi bi-whatsapp"></i> Fazer Orçamento
+                        Fazer Orçamento <i data-lucide="chevron-right" class="w-[18px] h-[18px]"></i>
                     </a>
                 </div>
 
@@ -245,7 +228,7 @@
                         <div class="text-2xl font-bold text-slate-900 mt-1">Alta Performance</div>
                     </div>
                     <a href="https://wa.me/5541988708878" target="_blank" rel="noopener noreferrer" class="w-full bg-slate-100 hover:bg-slate-200 text-slate-900 text-center py-3 rounded-xl font-bold transition-colors flex justify-center items-center gap-2">
-                        <i class="bi bi-whatsapp"></i> Falar com Consultor
+                        Falar com Consultor <i data-lucide="chevron-right" class="w-[18px] h-[18px]"></i>
                     </a>
                 </div>
             </div>
@@ -257,7 +240,7 @@
                         <i data-lucide="timer" class="w-7 h-7 text-white"></i>
                     </div>
                     <div>
-                        <h4 class="font-bold text-slate-900 text-xl mb-1">Velocidade alinhada &agrave; Complexidade</h4>
+                        <h4 class="font-bold text-slate-900 text-xl mb-1">Velocidade alinhada à Complexidade</h4>
                         <p class="text-slate-600 text-base max-w-2xl">
                             A sua <strong class="text-indigo-600">Landing Page</strong> pode estar no ar a gerar vendas em <strong>até 48 horas</strong>. ⚡ Para sistemas complexos e aplicações sob medida, desenhamos um cronograma exclusivo para garantir a máxima qualidade técnica do seu projeto.
                         </p>
@@ -276,83 +259,49 @@
             <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
                 <div>
                     <h2 class="text-4xl font-black text-slate-900 mb-4">Projetos que geram <br/><span class="text-indigo-600">autoridade e resultado.</span></h2>
-                    <p class="text-slate-600 text-lg max-w-2xl">N&atilde;o entregamos apenas um site bonito. Entregamos ferramentas de vendas.</p>
+                    <p class="text-slate-600 text-lg max-w-2xl">Não entregamos apenas um site bonito. Entregamos ferramentas de vendas.</p>
                 </div>
                 <a href="https://wa.me/5541988708878" target="_blank" rel="noopener noreferrer" class="text-indigo-600 font-bold hover:text-indigo-800 flex items-center gap-2">
-                    <i class="bi bi-whatsapp"></i> Quero um projeto assim
+                    Quero um projeto assim <i data-lucide="chevron-right" class="w-5 h-5"></i>
                 </a>
             </div>
 
             <div class="grid md:grid-cols-2 gap-8">
                 <!-- Item 1 -->
-                <div class="group relative rounded-2xl overflow-hidden aspect-[16/9] bg-slate-100 cursor-pointer portfolio-card" data-gallery="assets/img/portfolio/Print 1.png|assets/img/portfolio/print 2.png|assets/img/portfolio/print 3.png" data-gallery-title="Domu Cabinets">
-                    <img src="assets/img/portfolio/Print 1.png" alt="Projeto Domu Cabinets" class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105 cursor-zoom-in" data-enlargeable />
-                    <div class="absolute inset-0 bg-gradient-to-br from-slate-900/70 to-slate-900/80"></div>
+                <div class="group relative rounded-2xl overflow-hidden aspect-[16/9] bg-slate-100 cursor-pointer">
+                    <div class="absolute inset-0 bg-gradient-to-br from-slate-800 to-slate-900 opacity-90 transition-transform duration-500 group-hover:scale-105"></div>
                     <div class="absolute inset-0 p-8 flex flex-col justify-end bg-gradient-to-t from-black/80 via-black/20 to-transparent">
                         <span class="text-white/80 text-sm font-bold uppercase tracking-wider mb-2">Web Software</span>
                         <h3 class="text-3xl font-bold text-white">Domu Cabinets</h3>
-                        <span class="mt-3 inline-flex w-fit items-center gap-2 rounded-lg bg-white/15 px-3 py-2 text-sm font-semibold text-white backdrop-blur-sm opacity-0 translate-y-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0">
-                            <i class="bi bi-images"></i> Ver Fotos
-                        </span>
                     </div>
                 </div>
                 <!-- Item 2 -->
-                <div class="group relative rounded-2xl overflow-hidden aspect-[16/9] bg-slate-100 cursor-pointer portfolio-card" data-gallery="assets/img/portfolio/clinic 1.png|assets/img/portfolio/clinic 2.png|assets/img/portfolio/clinic 3.png|assets/img/portfolio/clinic 4.png|assets/img/portfolio/clinic 5.png" data-gallery-title="Clinica MedLab">
-                    <img src="assets/img/portfolio/clinic 1.png" alt="Projeto Clinica MedLab" class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105 cursor-zoom-in" data-enlargeable />
-                    <div class="absolute inset-0 bg-gradient-to-br from-blue-900/65 to-blue-950/80"></div>
+                <div class="group relative rounded-2xl overflow-hidden aspect-[16/9] bg-slate-100 cursor-pointer">
+                    <div class="absolute inset-0 bg-gradient-to-br from-blue-600 to-blue-800 opacity-90 transition-transform duration-500 group-hover:scale-105"></div>
                     <div class="absolute inset-0 p-8 flex flex-col justify-end bg-gradient-to-t from-black/80 via-black/20 to-transparent">
                         <span class="text-white/80 text-sm font-bold uppercase tracking-wider mb-2">Landing Page Médica</span>
                         <h3 class="text-3xl font-bold text-white">Clínica MedLab</h3>
-                        <span class="mt-3 inline-flex w-fit items-center gap-2 rounded-lg bg-white/15 px-3 py-2 text-sm font-semibold text-white backdrop-blur-sm opacity-0 translate-y-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0">
-                            <i class="bi bi-images"></i> Ver Fotos
-                        </span>
                     </div>
                 </div>
                 <!-- Item 3 -->
-                <div class="group relative rounded-2xl overflow-hidden aspect-[16/9] bg-slate-100 cursor-pointer portfolio-card" data-gallery="assets/img/portfolio/orgausa1.jpg|assets/img/portfolio/orgausa2.png|assets/img/portfolio/orgausa3.png|assets/img/portfolio/orgausa4.png" data-gallery-title="Organnact">
-                    <img src="assets/img/portfolio/orgausa1.jpg" alt="Projeto Organnact" class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105 cursor-zoom-in" data-enlargeable />
-                    <div class="absolute inset-0 bg-gradient-to-br from-amber-900/60 to-amber-950/80"></div>
+                <div class="group relative rounded-2xl overflow-hidden aspect-[16/9] bg-slate-100 cursor-pointer">
+                    <div class="absolute inset-0 bg-gradient-to-br from-amber-700 to-amber-900 opacity-90 transition-transform duration-500 group-hover:scale-105"></div>
                     <div class="absolute inset-0 p-8 flex flex-col justify-end bg-gradient-to-t from-black/80 via-black/20 to-transparent">
-                        <span class="text-white/80 text-sm font-bold uppercase tracking-wider mb-2">Integra&ccedil;&atilde;o CRM</span>
+                        <span class="text-white/80 text-sm font-bold uppercase tracking-wider mb-2">Integração CRM</span>
                         <h3 class="text-3xl font-bold text-white">Organnact</h3>
-                        <span class="mt-3 inline-flex w-fit items-center gap-2 rounded-lg bg-white/15 px-3 py-2 text-sm font-semibold text-white backdrop-blur-sm opacity-0 translate-y-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0">
-                            <i class="bi bi-images"></i> Ver Fotos
-                        </span>
                     </div>
                 </div>
                 <!-- Item 4 -->
-                <div class="group relative rounded-2xl overflow-hidden aspect-[16/9] bg-slate-100 cursor-pointer portfolio-card" data-gallery="assets/img/portfolio/site portfolio 1.png|assets/img/portfolio/site portfolio 2.png|assets/img/portfolio/Onepage.png|assets/img/portfolio/One page 2.png" data-gallery-title="Site Institucional">
-                    <img src="assets/img/portfolio/site portfolio 1.png" alt="Projeto Site Institucional" class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105 cursor-zoom-in" data-enlargeable />
-                    <div class="absolute inset-0 bg-gradient-to-br from-indigo-900/55 to-purple-950/75"></div>
+                <div class="group relative rounded-2xl overflow-hidden aspect-[16/9] bg-slate-100 cursor-pointer">
+                    <div class="absolute inset-0 bg-gradient-to-br from-indigo-600 to-purple-800 opacity-90 transition-transform duration-500 group-hover:scale-105"></div>
                     <div class="absolute inset-0 p-8 flex flex-col justify-end bg-gradient-to-t from-black/80 via-black/20 to-transparent">
                         <span class="text-white/80 text-sm font-bold uppercase tracking-wider mb-2">Site Institucional</span>
                         <h3 class="text-3xl font-bold text-white">Tech Startup</h3>
-                        <span class="mt-3 inline-flex w-fit items-center gap-2 rounded-lg bg-white/15 px-3 py-2 text-sm font-semibold text-white backdrop-blur-sm opacity-0 translate-y-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0">
-                            <i class="bi bi-images"></i> Ver Fotos
-                        </span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <div id="image-lightbox" class="fixed inset-0 z-[120] hidden items-center justify-center bg-black/85 p-4">
-        <button id="image-lightbox-close" type="button" class="absolute right-5 top-5 inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/20 text-white hover:bg-white/30" aria-label="Fechar imagem">
-            <i class="bi bi-x-lg"></i>
-        </button>
-        <button id="image-lightbox-prev" type="button" class="absolute left-5 top-1/2 -translate-y-1/2 inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/20 text-white hover:bg-white/30" aria-label="Imagem anterior">
-            <i class="bi bi-chevron-left"></i>
-        </button>
-        <button id="image-lightbox-next" type="button" class="absolute right-5 top-1/2 -translate-y-1/2 inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/20 text-white hover:bg-white/30" aria-label="Próxima imagem">
-            <i class="bi bi-chevron-right"></i>
-        </button>
-        <img id="image-lightbox-img" src="" alt="" class="max-h-[82vh] max-w-[90vw] rounded-xl shadow-2xl" />
-        <div class="absolute bottom-6 left-1/2 -translate-x-1/2 rounded-full bg-white/15 px-4 py-2 text-sm text-white backdrop-blur-sm">
-            <span id="image-lightbox-caption"></span>
-            <span class="mx-2 text-white/70">|</span>
-            <span id="image-lightbox-counter"></span>
-        </div>
-    </div>
 
     <!-- --- PASSO A PASSO (COMO FUNCIONA) --- -->
     <section id="processo" class="py-24 bg-slate-50 border-t border-slate-200">
@@ -370,7 +319,7 @@
                         <i data-lucide="message-square" class="w-6 h-6"></i>
                     </div>
                     <h3 class="text-xl font-bold text-slate-900 mb-2 relative z-10">Briefing & Descoberta</h3>
-                    <p class="text-slate-600 text-sm relative z-10">Entendemos o seu momento, o objetivo do site e quem &eacute; o seu público-alvo através de uma conversa rápida.</p>
+                    <p class="text-slate-600 text-sm relative z-10">Entendemos o seu momento, o objetivo do site e quem é o seu público-alvo através de uma conversa rápida.</p>
                 </div>
 
                 <!-- Passo 2 -->
@@ -380,7 +329,7 @@
                         <i data-lucide="file-text" class="w-6 h-6"></i>
                     </div>
                     <h3 class="text-xl font-bold text-slate-900 mb-2 relative z-10">Proposta & Fecho</h3>
-                    <p class="text-slate-600 text-sm relative z-10">Apresentamos a solu&ccedil;&atilde;o ideal com or&ccedil;amento detalhado. Ap&oacute;s aprova&ccedil;&atilde;o, formalizamos o acordo.</p>
+                    <p class="text-slate-600 text-sm relative z-10">Apresentamos a solução ideal com orçamento detalhado. Após aprovação, formalizamos o acordo.</p>
                 </div>
 
                 <!-- Passo 3 -->
@@ -390,7 +339,7 @@
                         <i data-lucide="pen-tool" class="w-6 h-6"></i>
                     </div>
                     <h3 class="text-xl font-bold text-slate-900 mb-2 relative z-10">Protótipo</h3>
-                    <p class="text-slate-600 text-sm relative z-10">Criamos um prot&oacute;tipo visual e interativo da sua p&aacute;gina. S&oacute; avan&ccedil;amos para o c&oacute;digo ap&oacute;s a sua total aprova&ccedil;&atilde;o.</p>
+                    <p class="text-slate-600 text-sm relative z-10">Criamos um protótipo visual e interativo da sua página. Só avançamos para o código após a sua total aprovação.</p>
                 </div>
 
                 <!-- Passo 4 -->
@@ -409,7 +358,7 @@
                     <div class="w-12 h-12 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center mb-6 relative z-10">
                         <i data-lucide="search" class="w-6 h-6"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-2 relative z-10">Testes (Homologa&ccedil;&atilde;o)</h3>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2 relative z-10">Testes (Homologação)</h3>
                     <p class="text-slate-600 text-sm relative z-10">Enviamos um link temporário para que possa testar botões, textos e garantir que tudo está perfeito.</p>
                 </div>
 
@@ -430,9 +379,8 @@
     <section id="diferenciais" class="py-24 bg-slate-900 text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <img src="assets/img/vortex-development.png" alt="Logo Vortex Development" class="h-14 md:h-16 w-auto mx-auto mb-6" />
                 <h2 class="text-3xl md:text-4xl font-black mb-4">Por que escolher a Vortex?</h2>
-                <p class="text-indigo-200">Constru&iacute;mos a funda&ccedil;&atilde;o digital que seu neg&oacute;cio merece.</p>
+                <p class="text-indigo-200">Construímos a fundação digital que seu negócio merece.</p>
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -442,7 +390,7 @@
                         <i data-lucide="smartphone" class="w-6 h-6"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-2">100% Responsivo</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">Perfeito em celulares, tablets e desktops. N&atilde;o perca nenhuma venda.</p>
+                    <p class="text-slate-400 text-sm leading-relaxed">Perfeito em celulares, tablets e desktops. Não perca nenhuma venda.</p>
                 </div>
                 <!-- Feat 2 -->
                 <div class="bg-slate-800 p-6 rounded-2xl border border-slate-700 hover:border-indigo-500 transition-colors">
@@ -450,15 +398,15 @@
                         <i data-lucide="zap" class="w-6 h-6"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-2">Alta Performance</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">Sites otimizados que carregam r&aacute;pido, retendo a aten&ccedil;&atilde;o do cliente.</p>
+                    <p class="text-slate-400 text-sm leading-relaxed">Sites otimizados que carregam rápido, retendo a atenção do cliente.</p>
                 </div>
                 <!-- Feat 3 -->
                 <div class="bg-slate-800 p-6 rounded-2xl border border-slate-700 hover:border-indigo-500 transition-colors">
                     <div class="w-12 h-12 bg-indigo-500/20 text-indigo-400 rounded-xl flex items-center justify-center mb-4">
                         <i data-lucide="monitor" class="w-6 h-6"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-2">Otimiza&ccedil;&atilde;o SEO</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">Estrutura pronta para ser encontrada pelo Google e atrair tr&aacute;fego org&acirc;nico.</p>
+                    <h3 class="text-xl font-bold mb-2">Otimização SEO</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Estrutura pronta para ser encontrada pelo Google e atrair tráfego orgânico.</p>
                 </div>
                 <!-- Feat 4 -->
                 <div class="bg-slate-800 p-6 rounded-2xl border border-slate-700 hover:border-indigo-500 transition-colors">
@@ -466,35 +414,12 @@
                         <i data-lucide="shield-check" class="w-6 h-6"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-2">Segurança</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">Prote&ccedil;&atilde;o avan&ccedil;ada contra invas&otilde;es e estabilidade garantida.</p>
+                    <p class="text-slate-400 text-sm leading-relaxed">Proteção avançada contra invasões e estabilidade garantida.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- --- EQUIPE --- -->
-    <section id="team" class="py-24 bg-slate-50 border-t border-slate-200">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-14">
-                <h2 class="text-3xl md:text-4xl font-black text-slate-900 mb-4">Equipe Vortex</h2>
-                <p class="text-slate-600 text-lg">Conheca quem projeta, desenvolve e entrega cada solucao da Vortex.</p>
-            </div>
-
-            <div class="flex justify-center">
-                <article class="w-full max-w-md bg-white rounded-2xl border border-slate-100 shadow-lg shadow-slate-200/60 overflow-hidden">
-                    <img src="assets/img/team/vitor.JPG" alt="Vitor Pereira" class="h-72 w-full object-cover object-top" />
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold text-slate-900">Vitor Pereira</h3>
-                        <p class="text-indigo-600 font-semibold mt-1">Lider de Projetos e Desenvolvedor</p>
-                        <p class="text-slate-600 mt-4">Responsavel pela estrategia tecnica, estrutura dos projetos e qualidade final das entregas.</p>
-                        <a href="https://www.linkedin.com/in/vitor-pereira-co/" target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex items-center gap-2 rounded-lg border border-slate-200 px-3 py-2 text-sm font-semibold text-slate-700 hover:border-indigo-300 hover:text-indigo-600">
-                            <i class="bi bi-linkedin"></i> LinkedIn
-                        </a>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
     <!-- --- SOCIAL PROOF (DEPOIMENTOS) --- -->
     <section class="py-24 bg-slate-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -503,15 +428,12 @@
             <div class="grid md:grid-cols-3 gap-8 text-left">
                 <!-- Dep 1 -->
                 <div class="bg-white p-8 rounded-2xl shadow-lg shadow-slate-200/50 relative">
-                    <div class="flex items-center gap-3 mb-4">
-                        <img src="assets/img/testimonials/raynon.png" alt="Raynon Alexandre" class="h-12 w-12 rounded-full object-cover" />
-                        <div class="flex gap-1 text-amber-400">
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                        </div>
+                    <div class="flex gap-1 mb-4 text-amber-400">
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
                     </div>
                     <p class="text-slate-600 italic mb-6">"Excelente serviço prestado pela Vortex, preço justo, atendimento rápido e sempre explicaram cada detalhe do projeto com muita sinceridade."</p>
                     <div>
@@ -521,17 +443,14 @@
                 </div>
                 <!-- Dep 2 -->
                 <div class="bg-white p-8 rounded-2xl shadow-lg shadow-slate-200/50 relative">
-                    <div class="flex items-center gap-3 mb-4">
-                        <img src="assets/img/testimonials/felipe%20resstel.png" alt="Felipe Resstel" class="h-12 w-12 rounded-full object-cover" />
-                        <div class="flex gap-1 text-amber-400">
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                        </div>
+                    <div class="flex gap-1 mb-4 text-amber-400">
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
                     </div>
-                    <p class="text-slate-600 italic mb-6">"Tive uma excelente experiência. A navega&ccedil;&atilde;o do meu novo site &eacute; intuitiva e facilitou muito para os clientes. Recomendo fortemente!"</p>
+                    <p class="text-slate-600 italic mb-6">"Tive uma excelente experiência. A navegação do meu novo site é intuitiva e facilitou muito para os clientes. Recomendo fortemente!"</p>
                     <div>
                         <p class="font-bold text-slate-900">Felipe Resstel</p>
                         <p class="text-sm text-slate-500">CEO DomuCabinets</p>
@@ -539,15 +458,12 @@
                 </div>
                 <!-- Dep 3 -->
                 <div class="bg-white p-8 rounded-2xl shadow-lg shadow-slate-200/50 relative">
-                    <div class="flex items-center gap-3 mb-4">
-                        <img src="assets/img/testimonials/adri.jpg" alt="Adriana Lopes" class="h-12 w-12 rounded-full object-cover" />
-                        <div class="flex gap-1 text-amber-400">
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                        </div>
+                    <div class="flex gap-1 mb-4 text-amber-400">
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
                     </div>
                     <p class="text-slate-600 italic mb-6">"Superou nossas expectativas e atendeu muito as demandas que temos. A landing page ainda foi integrada ao nosso CRM. Excelente!"</p>
                     <div>
@@ -565,7 +481,7 @@
         
         <div class="max-w-3xl mx-auto px-4 relative z-10">
             <h2 class="text-4xl md:text-5xl font-black mb-6 tracking-tight">Pronto para transformar sua presença digital?</h2>
-            <p class="text-xl text-indigo-100 mb-10">Fale com nossa equipe pelo WhatsApp agora mesmo. Vamos entender o seu neg&oacute;cio e propor a melhor solu&ccedil;&atilde;o, sem compromisso.</p>
+            <p class="text-xl text-indigo-100 mb-10">Fale com nossa equipe pelo WhatsApp agora mesmo. Vamos entender o seu negócio e propor a melhor solução, sem compromisso.</p>
             
             <a 
                 href="https://wa.me/5541988708878?text=Ol%C3%A1%2C%20equipe%20Vortex!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20e%20entender%20melhor%20como%20voc%C3%AAs%20podem%20me%20ajudar."
@@ -573,7 +489,7 @@
                 rel="noopener noreferrer"
                 class="inline-flex items-center gap-3 bg-white text-indigo-900 px-10 py-5 rounded-full font-black text-xl hover:scale-105 hover:shadow-2xl hover:shadow-white/20 transition-all"
             >
-                <i class="bi bi-whatsapp text-2xl text-green-500"></i>
+                <i data-lucide="message-circle" class="w-7 h-7 text-green-500"></i>
                 Solicitar Orçamento Agora
             </a>
         </div>
@@ -583,7 +499,8 @@
     <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-900">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
             <div class="flex items-center gap-2">
-                <img src="assets/img/vortex-development.png" alt="Vortex Development" class="h-10 w-auto" />
+                <i data-lucide="zap" class="w-6 h-6 text-indigo-500"></i>
+                <span class="text-xl font-black text-white tracking-tight">VORTEX</span>
             </div>
             <p class="text-sm">© <span id="current-year"></span> Vortex Development. Todos os direitos reservados.</p>
             <div class="text-sm">
@@ -594,7 +511,7 @@
 
     <!-- --- JAVASCRIPT (Lógica do Menu e Scroll) --- -->
     <script>
-        // Inicializa os Ícones do Lucide
+        // Inicializa os ícones do Lucide
         lucide.createIcons();
 
         // Pega o ano atual para o rodapé
@@ -602,6 +519,9 @@
 
         // Elementos do DOM
         const header = document.getElementById('main-header');
+        const logoContainer = document.getElementById('logo-container');
+        const logoIcon = document.getElementById('logo-icon');
+        const logoText = document.getElementById('logo-text');
         const navLinks = document.querySelectorAll('.nav-link');
         
         // Elementos Mobile
@@ -618,6 +538,15 @@
                 header.classList.add('bg-white', 'shadow-md', 'py-3');
                 header.classList.remove('bg-transparent', 'py-5');
                 
+                logoContainer.classList.add('bg-indigo-600');
+                logoContainer.classList.remove('bg-white');
+                
+                logoIcon.classList.add('text-white');
+                logoIcon.classList.remove('text-indigo-600');
+                
+                logoText.classList.add('text-indigo-900');
+                logoText.classList.remove('text-white');
+                
                 navLinks.forEach(link => {
                     link.classList.add('text-slate-600');
                     link.classList.remove('text-indigo-100');
@@ -632,6 +561,15 @@
                 // Estado Transparente Inicial
                 header.classList.remove('bg-white', 'shadow-md', 'py-3');
                 header.classList.add('bg-transparent', 'py-5');
+                
+                logoContainer.classList.remove('bg-indigo-600');
+                logoContainer.classList.add('bg-white');
+                
+                logoIcon.classList.remove('text-white');
+                logoIcon.classList.add('text-indigo-600');
+                
+                logoText.classList.remove('text-indigo-900');
+                logoText.classList.add('text-white');
                 
                 navLinks.forEach(link => {
                     link.classList.remove('text-slate-600');
@@ -664,101 +602,6 @@
                 mobileMenuIconClose.classList.add('hidden');
             });
         });
-        // Lightbox em carrossel para portfolio
-        const imageLightbox = document.getElementById('image-lightbox');
-        const imageLightboxImg = document.getElementById('image-lightbox-img');
-        const imageLightboxClose = document.getElementById('image-lightbox-close');
-        const imageLightboxPrev = document.getElementById('image-lightbox-prev');
-        const imageLightboxNext = document.getElementById('image-lightbox-next');
-        const imageLightboxCaption = document.getElementById('image-lightbox-caption');
-        const imageLightboxCounter = document.getElementById('image-lightbox-counter');
-
-        let galleryItems = [];
-        let galleryIndex = 0;
-
-        const updateLightboxImage = () => {
-            if (!imageLightboxImg || galleryItems.length === 0) return;
-            const current = galleryItems[galleryIndex];
-            imageLightboxImg.src = current.src;
-            imageLightboxImg.alt = current.alt;
-
-            if (imageLightboxCaption) {
-                imageLightboxCaption.textContent = current.title || current.alt || '';
-            }
-
-            if (imageLightboxCounter) {
-                imageLightboxCounter.textContent = `${galleryIndex + 1}/${galleryItems.length}`;
-            }
-
-            const multiple = galleryItems.length > 1;
-            if (imageLightboxPrev) imageLightboxPrev.classList.toggle('hidden', !multiple);
-            if (imageLightboxNext) imageLightboxNext.classList.toggle('hidden', !multiple);
-        };
-
-        const openGallery = (items, startIndex = 0) => {
-            if (!imageLightbox || !imageLightboxImg || !items || items.length === 0) return;
-            galleryItems = items;
-            galleryIndex = Math.max(0, Math.min(startIndex, items.length - 1));
-            updateLightboxImage();
-            imageLightbox.classList.remove('hidden');
-            imageLightbox.classList.add('flex');
-            document.body.classList.add('overflow-hidden');
-        };
-
-        const closeLightbox = () => {
-            if (!imageLightbox || !imageLightboxImg) return;
-            imageLightbox.classList.add('hidden');
-            imageLightbox.classList.remove('flex');
-            imageLightboxImg.src = '';
-            imageLightboxImg.alt = '';
-            galleryItems = [];
-            galleryIndex = 0;
-            document.body.classList.remove('overflow-hidden');
-        };
-
-        const showPrevImage = () => {
-            if (galleryItems.length <= 1) return;
-            galleryIndex = (galleryIndex - 1 + galleryItems.length) % galleryItems.length;
-            updateLightboxImage();
-        };
-
-        const showNextImage = () => {
-            if (galleryItems.length <= 1) return;
-            galleryIndex = (galleryIndex + 1) % galleryItems.length;
-            updateLightboxImage();
-        };
-
-        document.querySelectorAll('.portfolio-card').forEach((card) => {
-            card.addEventListener('click', () => {
-                const galleryRaw = card.dataset.gallery || '';
-                const galleryTitle = card.dataset.galleryTitle || 'Projeto';
-                const images = galleryRaw.split('|').map((item) => item.trim()).filter(Boolean).map((src, idx) => ({
-                    src,
-                    alt: `${galleryTitle} - foto ${idx + 1}`,
-                    title: galleryTitle
-                }));
-                openGallery(images, 0);
-            });
-        });
-
-        if (imageLightboxClose) imageLightboxClose.addEventListener('click', closeLightbox);
-        if (imageLightboxPrev) imageLightboxPrev.addEventListener('click', showPrevImage);
-        if (imageLightboxNext) imageLightboxNext.addEventListener('click', showNextImage);
-
-        if (imageLightbox) {
-            imageLightbox.addEventListener('click', (event) => {
-                if (event.target === imageLightbox) {
-                    closeLightbox();
-                }
-            });
-        }
-
-        document.addEventListener('keydown', (event) => {
-            if (event.key === 'Escape') closeLightbox();
-            if (event.key === 'ArrowLeft') showPrevImage();
-            if (event.key === 'ArrowRight') showNextImage();
-        });
     </script>
 </body>
 </html>
-
