@@ -707,25 +707,22 @@
             mobileMenuIconClose.classList.toggle('hidden');
         });
 
-        // Scroll suave dos links da navbar desktop
-        navLinks.forEach((link) => {
+        // Scroll suave para qualquer link interno da pÃ¡gina (#...)
+        const internalAnchorLinks = document.querySelectorAll('a[href^="#"]:not([href="#"])');
+        internalAnchorLinks.forEach((link) => {
             link.addEventListener('click', (event) => {
                 const hash = link.getAttribute('href') || '';
                 if (!hash.startsWith('#')) return;
+
+                const targetSection = document.querySelector(hash);
+                if (!targetSection) return;
+
                 event.preventDefault();
                 scrollToSection(hash);
-            });
-        });
 
-        // Scroll suave + fechar menu no mobile
-        mobileNavLinks.forEach((link) => {
-            link.addEventListener('click', (event) => {
-                const hash = link.getAttribute('href') || '';
-                if (hash.startsWith('#')) {
-                    event.preventDefault();
-                    scrollToSection(hash);
+                if (link.classList.contains('mobile-nav-link')) {
+                    closeMobileMenu();
                 }
-                closeMobileMenu();
             });
         });
         // Lightbox em carrossel para portfolio
