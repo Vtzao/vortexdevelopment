@@ -33,8 +33,8 @@
       '@context': 'https://schema.org',
       '@type': 'Organization',
       name: 'Vortex Development',
-      url: 'https://vortexdevteam.com',
-      logo: 'https://vortexdevteam.com/logo.png',
+      url: 'https://vortexcode.com.br',
+      logo: 'https://vortexcode.com.br/assets/img/social-preview-vortex.png',
       contactPoint: {
         '@type': 'ContactPoint',
         telephone: '+55-41-98870-8878',
